@@ -1,4 +1,5 @@
 #varun yelchur
+#encodes the password and adds three each time to each digit
 def encoder(password):
     final_list = []
     temp_list = list(password.strip(" "))
@@ -10,6 +11,19 @@ def encoder(password):
     password = str(''.join(final_list))
     return password
 
+#added my own decoder because partner did not, however my decoder is also in her link to her repo
+def decoder(password):
+    final_list = []
+    temp_list = list(password.strip(" "))
+    for i in temp_list:
+        i = int(i)
+        i -= 3
+        i = str(i)
+        final_list.append(i)
+    password = str(''.join(final_list))
+    return password
+
+#main method
 def main():
     condition = True
     while condition:
